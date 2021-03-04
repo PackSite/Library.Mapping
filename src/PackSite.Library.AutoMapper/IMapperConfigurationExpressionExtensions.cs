@@ -18,7 +18,8 @@
         /// <returns></returns>
         public static IMapperConfigurationExpression AddCustomMappings(this IMapperConfigurationExpression mapperConfiguration, Assembly assembly, ILoggerFactory loggerFactory)
         {
-            mapperConfiguration.AddProfile(new CustomAutoMapperProfile(assembly, loggerFactory.CreateLogger<CustomAutoMapperProfile>()));
+            ILogger<CustomAutoMapperProfile> logger = loggerFactory.CreateLogger<CustomAutoMapperProfile>();
+            mapperConfiguration.AddProfile(new CustomAutoMapperProfile(assembly, logger));
 
             return mapperConfiguration;
         }
