@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{C3031A86-77FB-4EBA-892D-A9E6758098D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{338176F5-CA3F-4629-9ADE-06A55ACB6B39}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		clean.ps1 = clean.ps1
+		Directory.Build.props = Directory.Build.props
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{EFBBAF68-75D5-4EC9-8AC7-4D73F9DD8303}"
+	ProjectSection(SolutionItems) = preProject
+		..\CHANGELOG.md = ..\CHANGELOG.md
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5499923A-765B-49CE-9E13-C903ABFA4968}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{4A9E018F-C8E2-48B7-B2E9-9DD2232FD57B}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\CD.yml = ..\.github\workflows\CD.yml
+		..\.github\workflows\CI.yml = ..\.github\workflows\CI.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackSite.Library.AutoMapper", "PackSite.Library.AutoMapper\PackSite.Library.AutoMapper.csproj", "{D4E80008-C280-4114-9D53-C1503FEAE5D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackSite.Library.AutoMapper.Tests", "PackSite.Library.AutoMapper.Tests\PackSite.Library.AutoMapper.Tests.csproj", "{D4F5D0F4-C753-4877-A52A-F155095FF2FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Debug|x64.ActiveCfg = Debug|x64
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Debug|x64.Build.0 = Debug|x64
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Debug|x86.ActiveCfg = Debug|x86
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Debug|x86.Build.0 = Debug|x86
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Release|x64.ActiveCfg = Release|x64
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Release|x64.Build.0 = Release|x64
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Release|x86.ActiveCfg = Release|x86
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8}.Release|x86.Build.0 = Release|x86
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Debug|x64.ActiveCfg = Debug|x64
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Debug|x64.Build.0 = Debug|x64
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Debug|x86.ActiveCfg = Debug|x86
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Debug|x86.Build.0 = Debug|x86
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Release|x64.ActiveCfg = Release|x64
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Release|x64.Build.0 = Release|x64
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Release|x86.ActiveCfg = Release|x86
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A9E018F-C8E2-48B7-B2E9-9DD2232FD57B} = {338176F5-CA3F-4629-9ADE-06A55ACB6B39}
+		{D4E80008-C280-4114-9D53-C1503FEAE5D8} = {C3031A86-77FB-4EBA-892D-A9E6758098D5}
+		{D4F5D0F4-C753-4877-A52A-F155095FF2FC} = {5499923A-765B-49CE-9E13-C903ABFA4968}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {624E5314-D5E8-46B2-A729-C9B9A04E4DFF}
+	EndGlobalSection
+EndGlobal

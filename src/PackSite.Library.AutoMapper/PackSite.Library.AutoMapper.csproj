@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netstandard2.1;netstandard2.0</TargetFrameworks>
+    <Authors>$(Company)</Authors>
+    <Description>PackSite licensing library</Description>
+    <PackageTags>licensing</PackageTags>
+    <PackageProjectUrl>https://github.com/PackSite/Library.Licensing</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/PackSite/Library.Licensing/blob/main/CHANGELOG.md</PackageReleaseNotes>
+    <PackageIcon>packsite-icon-64px.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\img\packsite-icon-64px.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="[5.0.0,]" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="[8.1.1,]" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>
