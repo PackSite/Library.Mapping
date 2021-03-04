@@ -1,7 +1,7 @@
 # AutoMapper.AutoMapper
 
 [![CI](https://github.com/PackSite/Library.AutoMapper/actions/workflows/CI.yml/badge.svg)](https://github.com/PackSite/Library.AutoMapper/actions/workflows/CI.yml)
-[![Coverage](https://codecov.io/gh/PackSite/Library.AutoMapper/branch/main/graph/badge.svg?token=HO7NN7GPOJ)](https://codecov.io/gh/PackSite/Library.AutoMapper)
+[![Coverage](https://codecov.io/gh/PackSite/Library.AutoMapper/branch/main/graph/badge.svg?token=L0VTCLOWG2)](https://codecov.io/gh/PackSite/Library.AutoMapper)
 
 AutoMapper extensions library
 
