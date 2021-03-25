@@ -30,7 +30,7 @@
 
             if (types.Count == 0)
             {
-                _logger.LogDebug("Skipping registering mappings in {Assembly}", rootAssembly);
+                _logger.LogWarning("No mappable ({Interface}) types in {Assembly}. Skipping...", typeof(IMappable).FullName, rootAssembly);
                 return;
             }
 
@@ -38,11 +38,11 @@
             bool anyEmpty = false;
             IEnumerable<ITypeMapConfiguration> typeMapConfigs = (this as IProfileConfiguration).TypeMapConfigs;
 
-            _logger.LogDebug("Registering mappings for {Count} types implementing {Interface} in {Assembly} {Types}", types.Count, nameof(ICustomMapping), rootAssembly, types);
+            _logger.LogDebug("Registering mappings for {Count} types implementing {Interface} in {Assembly} {Types}", types.Count, typeof(IMappable).FullName, rootAssembly, types);
 
             foreach (Type type in types)
             {
-                ICustomMapping? map = Activator.CreateInstance(type) as ICustomMapping;
+                IMappable? map = Activator.CreateInstance(type, true) as IMappable;
                 map?.CreateMappings(this);
 
                 int v = typeMapConfigs.Count();
@@ -54,10 +54,10 @@
                 count = v;
             }
 
-            _logger.LogInformation("Registered {Count} maps from {ICustomMappingTypesCount} classes implementing {Interface} for {Assembly}", typeMapConfigs.Count(), types.Count, nameof(ICustomMapping), rootAssembly);
+            _logger.LogInformation("Registered {Count} maps from {MappableTypesCount} classes implementing {Interface} for {Assembly}", typeMapConfigs.Count(), types.Count, typeof(IMappable).FullName, rootAssembly);
             if (anyEmpty)
             {
-                _logger.LogWarning("At least one class implementing {Interface} does not contain any mapping definitions in {Assembly}", nameof(ICustomMapping), rootAssembly);
+                _logger.LogWarning("At least one class implementing {Interface} does not contain any mapping definitions in {Assembly}", typeof(IMappable).FullName, rootAssembly);
             }
         }
 
@@ -67,7 +67,7 @@
 
             IEnumerable<Type>? withCustomMappings = from type in types
                                                     from instance in type.GetInterfaces()
-                                                    where typeof(ICustomMapping).IsAssignableFrom(type) && !type.IsAbstract && !type.IsInterface
+                                                    where typeof(IMappable).IsAssignableFrom(type) && !type.IsAbstract && !type.IsInterface
                                                     select type;
 
             return withCustomMappings.Distinct();

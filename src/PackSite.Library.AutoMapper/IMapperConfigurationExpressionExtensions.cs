@@ -1,5 +1,6 @@
 ﻿namespace PackSite.Library.AutoMapper
 {
+    using System.Linq;
     using System.Reflection;
     using global::AutoMapper;
     using Microsoft.Extensions.Logging;
@@ -12,14 +13,30 @@
         /// <summary>
         /// Adds custom mappings from assembly.
         /// </summary>
-        /// <param name="mapperConfiguration"></param>
-        /// <param name="assembly"></param>
-        /// <param name="loggerFactory"></param>
+        /// <param name="mapperConfiguration">Mapper configuration.</param>
+        /// <param name="loggerFactory">Logger factory.</param>
+        /// <param name="assembly">Assembly.</param>
         /// <returns></returns>
-        public static IMapperConfigurationExpression AddCustomMappings(this IMapperConfigurationExpression mapperConfiguration, Assembly assembly, ILoggerFactory loggerFactory)
+        public static IMapperConfigurationExpression AddMappingsFrom(this IMapperConfigurationExpression mapperConfiguration, ILoggerFactory loggerFactory, Assembly assembly)
         {
             ILogger<CustomAutoMapperProfile> logger = loggerFactory.CreateLogger<CustomAutoMapperProfile>();
             mapperConfiguration.AddProfile(new CustomAutoMapperProfile(assembly, logger));
+
+            return mapperConfiguration;
+        }
+
+        /// <summary>
+        /// Adds custom mappings from one or more assemblies.
+        /// </summary>
+        /// <param name="mapperConfiguration">Mapper configuration.</param>
+        /// <param name="loggerFactory">Logger factory.</param>
+        /// <param name="assembly">Assembly.</param>
+        /// <returns></returns>
+        public static IMapperConfigurationExpression AddMappingsFrom(this IMapperConfigurationExpression mapperConfiguration, ILoggerFactory loggerFactory, Assembly[] assembly)
+        {
+            ILogger<CustomAutoMapperProfile> logger = loggerFactory.CreateLogger<CustomAutoMapperProfile>();
+
+            mapperConfiguration.AddProfiles(assembly.Distinct().Select(x => new CustomAutoMapperProfile(x, logger)));
 
             return mapperConfiguration;
         }
