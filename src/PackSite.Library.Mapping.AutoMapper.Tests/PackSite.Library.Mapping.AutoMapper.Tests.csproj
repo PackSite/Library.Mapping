@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PackSite.Library.AutoMapper\PackSite.Library.AutoMapper.csproj" />
+    <ProjectReference Include="..\PackSite.Library.Mapping.AutoMapper\PackSite.Library.Mapping.AutoMapper.csproj" />
   </ItemGroup>
 
 </Project>

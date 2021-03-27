@@ -1,4 +1,4 @@
-﻿namespace PackSite.Library.AutoMapper
+﻿namespace PackSite.Library.Mapping.AutoMapper.Internal
 {
     using System;
     using System.Collections.Generic;
@@ -56,9 +56,7 @@
 
             _logger.LogInformation("Registered {Count} maps from {MappableTypesCount} classes implementing {Interface} for {Assembly}", typeMapConfigs.Count(), types.Count, typeof(IMappable).FullName, rootAssembly);
             if (anyEmpty)
-            {
                 _logger.LogWarning("At least one class implementing {Interface} does not contain any mapping definitions in {Assembly}", typeof(IMappable).FullName, rootAssembly);
-            }
         }
 
         private static IEnumerable<Type> GetCustomMappings(Assembly rootAssembly)

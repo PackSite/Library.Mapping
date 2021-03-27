@@ -1,9 +1,10 @@
-﻿namespace PackSite.Library.AutoMapper
+﻿namespace PackSite.Library.Mapping.AutoMapper
 {
     using System.Linq;
     using System.Reflection;
     using global::AutoMapper;
     using Microsoft.Extensions.Logging;
+    using PackSite.Library.Mapping.AutoMapper.Internal;
 
     /// <summary>
     /// AutoMapper configuration extensions.

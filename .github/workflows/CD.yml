@@ -26,7 +26,7 @@ jobs:
     - name: Pack
       run: |
         dotnet nuget update source PackSite --configfile ./src/NuGet.config -u ${{ secrets.GPR_OWNER }} -p ${{secrets.GPR_TOKEN }} --store-password-in-clear-text
-        dotnet pack src/PackSite.Library.AutoMapper.sln --configuration Release
+        dotnet pack src/PackSite.Library.Mapping.sln --configuration Release
 
     - name: Deploy to GitHub Package Registry
-      run: dotnet nuget push src/PackSite.Library.AutoMapper/bin/Release/*.nupkg -k ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push src/PackSite.Library.Mapping.AutoMapper/bin/Release/*.nupkg -k ${{ secrets.GITHUB_TOKEN }}

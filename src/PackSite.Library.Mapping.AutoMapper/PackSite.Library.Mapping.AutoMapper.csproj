@@ -5,8 +5,8 @@
     <Authors>$(Company)</Authors>
     <Description>PackSite AutoMapper library</Description>
     <PackageTags>AutoMapper</PackageTags>
-    <PackageProjectUrl>https://github.com/PackSite/Library.AutoMapper</PackageProjectUrl>
-    <PackageReleaseNotes>https://github.com/PackSite/Library.AutoMapper/blob/main/CHANGELOG.md</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/PackSite/Library.Mapping</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/PackSite/Library.Mapping/blob/main/CHANGELOG.md</PackageReleaseNotes>
     <PackageIcon>packsite-icon-64px.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>

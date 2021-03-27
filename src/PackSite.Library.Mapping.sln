@@ -27,9 +27,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{
 		..\.github\workflows\CI.yml = ..\.github\workflows\CI.yml
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackSite.Library.AutoMapper", "PackSite.Library.AutoMapper\PackSite.Library.AutoMapper.csproj", "{D4E80008-C280-4114-9D53-C1503FEAE5D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackSite.Library.Mapping.AutoMapper", "PackSite.Library.Mapping.AutoMapper\PackSite.Library.Mapping.AutoMapper.csproj", "{D4E80008-C280-4114-9D53-C1503FEAE5D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackSite.Library.AutoMapper.Tests", "PackSite.Library.AutoMapper.Tests\PackSite.Library.AutoMapper.Tests.csproj", "{D4F5D0F4-C753-4877-A52A-F155095FF2FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackSite.Library.Mapping.AutoMapper.Tests", "PackSite.Library.Mapping.AutoMapper.Tests\PackSite.Library.Mapping.AutoMapper.Tests.csproj", "{D4F5D0F4-C753-4877-A52A-F155095FF2FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

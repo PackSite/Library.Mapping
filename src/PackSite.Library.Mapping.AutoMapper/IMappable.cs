@@ -1,4 +1,4 @@
-namespace PackSite.Library.AutoMapper
+namespace PackSite.Library.Mapping.AutoMapper
 {
     using global::AutoMapper;
 
