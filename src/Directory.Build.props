@@ -1,11 +1,11 @@
 <Project>
 
   <PropertyGroup>
-    <Version>0.3.0</Version>
+    <Version>0.3.1</Version>
     <Author>PackSite</Author>
     <Company>PackSite</Company>
     <Copyright>
-      Copyright for project PackSite.Library.AutoMapper are held by PackSite, 2021.
+      Copyright for project PackSite.Library.Mapping are held by PackSite, 2021.
     </Copyright>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
