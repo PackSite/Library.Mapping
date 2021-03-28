@@ -55,16 +55,18 @@
             }
 
             _logger.LogInformation("Registered {Count} maps from {MappableTypesCount} classes implementing {Interface} for {Assembly}", typeMapConfigs.Count(), types.Count, typeof(IMappable).FullName, rootAssembly);
+
             if (anyEmpty)
+            {
                 _logger.LogWarning("At least one class implementing {Interface} does not contain any mapping definitions in {Assembly}", typeof(IMappable).FullName, rootAssembly);
+            }
         }
 
         private static IEnumerable<Type> GetCustomMappings(Assembly rootAssembly)
         {
-            Type[] types = rootAssembly.GetExportedTypes();
+            Type[] types = rootAssembly.GetTypes();
 
             IEnumerable<Type>? withCustomMappings = from type in types
-                                                    from instance in type.GetInterfaces()
                                                     where typeof(IMappable).IsAssignableFrom(type) && !type.IsAbstract && !type.IsInterface
                                                     select type;
 
