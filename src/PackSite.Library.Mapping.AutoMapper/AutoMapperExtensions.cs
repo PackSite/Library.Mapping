@@ -1,4 +1,4 @@
-﻿namespace PackSite.Library.Mapping.AutoMapper
+﻿namespace AutoMapper
 {
     using System;
     using System.Collections.Generic;
