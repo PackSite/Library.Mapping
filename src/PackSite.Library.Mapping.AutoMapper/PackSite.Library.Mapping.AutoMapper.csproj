@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netstandard2.1;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net5.0</TargetFrameworks>
     <Authors>$(Company)</Authors>
     <Description>PackSite AutoMapper library</Description>
-    <PackageTags>AutoMapper</PackageTags>
+    <PackageTags>PackSite library mapping AutoMapper</PackageTags>
     <PackageProjectUrl>https://github.com/PackSite/Library.Mapping</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/PackSite/Library.Mapping/blob/main/CHANGELOG.md</PackageReleaseNotes>
-    <PackageIcon>packsite-icon-64px.png</PackageIcon>
+    <PackageIcon>icon-64px.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -19,12 +19,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\img\packsite-icon-64px.png" Pack="true" PackagePath="" />
+    <None Include="..\..\img\icon-64px.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="[5.0.0,]" />
+    <PackageReference Include="AutoMapper" Version="[10.1.1,]" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="[8.1.1,]" />
   </ItemGroup>
 

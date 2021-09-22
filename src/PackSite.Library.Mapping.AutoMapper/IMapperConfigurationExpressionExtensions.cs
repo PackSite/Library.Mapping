@@ -7,7 +7,7 @@
     using PackSite.Library.Mapping.AutoMapper.Internal;
 
     /// <summary>
-    /// AutoMapper configuration extensions.
+    /// AutoMapper mapping configuration extensions.
     /// </summary>
     public static class IMapperConfigurationExpressionExtensions
     {
@@ -20,8 +20,8 @@
         /// <returns></returns>
         public static IMapperConfigurationExpression AddMappingsFrom(this IMapperConfigurationExpression mapperConfiguration, ILoggerFactory loggerFactory, Assembly assembly)
         {
-            ILogger<CustomAutoMapperProfile> logger = loggerFactory.CreateLogger<CustomAutoMapperProfile>();
-            mapperConfiguration.AddProfile(new CustomAutoMapperProfile(assembly, logger));
+            ILogger<MappingProfile> logger = loggerFactory.CreateLogger<MappingProfile>();
+            mapperConfiguration.AddProfile(new MappingProfile(assembly, logger));
 
             return mapperConfiguration;
         }
@@ -31,13 +31,13 @@
         /// </summary>
         /// <param name="mapperConfiguration">Mapper configuration.</param>
         /// <param name="loggerFactory">Logger factory.</param>
-        /// <param name="assembly">Assembly.</param>
+        /// <param name="assemblies">Assemblies.</param>
         /// <returns></returns>
-        public static IMapperConfigurationExpression AddMappingsFrom(this IMapperConfigurationExpression mapperConfiguration, ILoggerFactory loggerFactory, Assembly[] assembly)
+        public static IMapperConfigurationExpression AddMappingsFrom(this IMapperConfigurationExpression mapperConfiguration, ILoggerFactory loggerFactory, Assembly[] assemblies)
         {
-            ILogger<CustomAutoMapperProfile> logger = loggerFactory.CreateLogger<CustomAutoMapperProfile>();
+            ILogger<MappingProfile> logger = loggerFactory.CreateLogger<MappingProfile>();
 
-            mapperConfiguration.AddProfiles(assembly.Distinct().Select(x => new CustomAutoMapperProfile(x, logger)));
+            mapperConfiguration.AddProfiles(assemblies.Distinct().Select(x => new MappingProfile(x, logger)));
 
             return mapperConfiguration;
         }
